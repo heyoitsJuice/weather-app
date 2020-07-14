@@ -1,0 +1,112 @@
+.app {
+  background-image: url("../Images/weather-background.jpg");
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headerContainer {
+  justify-content: center;
+  display: flex;
+}
+
+/* .form {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+} */
+
+.formContainer {
+  justify-content: center;
+  display: flex;
+}
+
+.weather-card {
+  margin: 15px;
+  /* padding: 10px 50px; */
+  transition: 0.3s all ease;
+  box-shadow: 1px 4px lightcoral, 40px, lightcoral inset;
+  background-color: azure;
+  min-width: 100px;
+  min-height: 50px;
+}
+
+.weather-card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px 0 lightskyblue;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url("../Images/weather-background.jpg"); */
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.days {
+  color: coral;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  color: skyblue;
+  font-weight: bolder;
+  white-space: nowrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.header {
+  text-align: left;
+  border: transparent;
+  /* background-color: lightblue; */
+  padding: 2px 3px;
+}
+
+.header__title {
+  font-weight: 500;
+  font-family: "Futura", cursive;
+}
+
+.icons {
+  width: 50px;
+  margin: auto;
+}
+
+.temperature {
+  margin: 18px;
+  color: black;
+}
+
+.temperature span {
+  white-space: nowrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.temperature .max {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.temperature .min {
+  font-size: 23px;
+}
