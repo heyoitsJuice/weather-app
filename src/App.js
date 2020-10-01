@@ -4,31 +4,6 @@ import Card from "./Components/Card";
 import Form from "./Components/Form";
 import axios from "axios";
 import Header from "./Components/Header";
-// import Grid from "@material-ui/core/Grid";
-
-/*
-const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const StyledNotFound = styled.div`
-  display: flex;
-  margin-top: 25%;
-  justify-content: center;
-  text-align: center;
-  @media (max-width: 768px) {
-    width: 50%;
-  }
-`;
-
-const StyledSearchBarContainer = styled.div`
-  display: flex;
-  flex-direction: ${(props) => (props.top ? "row" : "column")};
-  margin-top: ${(props) => (props.top ? "1em" : "5em")};
-`;
-*/
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -61,23 +36,6 @@ const App = () => {
   };
 
   var moment = require("moment");
-  // var date = moment.unix(weather.dt).format("dddd");
-  // console.log("date", date);
-  // const weatherDate = ({ reading }) => {
-  //   let newDate = new Date();
-  //   const weekday = reading.dt * 1000;
-  //   newDate.setTime(weekday);
-  //   console.log("weekday", weekday);
-  // };
-
-  // const ms = data.weather.dt * 1000;
-  // const weekday = new Date(ms);
-  // const date = weekday.toLocaleString("en-US", { weekday: "long" });
-
-  // var date = new Date(data.dt * 1000).toLocaleString("en-US", {
-  //   weekday: "long",
-  // });
-  // console.log("date", weatherDate);
 
   console.log("data", data);
   return (
@@ -90,8 +48,6 @@ const App = () => {
       </div>
 
       <div className="container">
-        {/* <Grid container direction="row" justify="center" alignItems="center">
-            <Grid item xs={12}> */}
         {data !== null &&
           data
             .filter((_, i) => i % 8 == 0)
@@ -109,45 +65,6 @@ const App = () => {
                 />
               );
             })}
-
-        {/* </Grid>
-          </Grid> */}
-
-        {/* <Card
-            day={"Monday"}
-            icons={"Sunny"}
-            description={"Sunny"}
-            min={0}
-            max={0}
-          />
-          <Card
-            day={"Tuesday"}
-            icons={"Rainy"}
-            description={"Rainy"}
-            min={40}
-            max={40}
-          />
-          <Card
-            day={"Wednesday"}
-            icons={"Snowing"}
-            description={"Snowing"}
-            min={40}
-            max={40}
-          />
-          <Card
-            day={"Thursday"}
-            icons={"Thunder"}
-            description={"Thunder"}
-            min={40}
-            max={40}
-          />
-          <Card
-            day={"Friday"}
-            icons={"Cloudy"}
-            description={"Cloudy"}
-            min={40}
-            max={40}
-          /> */}
       </div>
     </div>
   );
